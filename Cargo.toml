@@ -6,3 +6,4 @@ edition = "2021"
 [dependencies]
 # yew = { version = "0.21.0", features = ["csr"] }
 yew = { git = "https://github.com/yewstack/yew/", features = ["csr"] }
+web-sys = { version = "0.3.69", features = ["ErrorEvent", "ErrorEventInit", "WebSocket"] }
