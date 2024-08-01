@@ -1,4 +1,12 @@
-# ErrorEvent Trouble
+# ErrorEvent ~~Trouble~~ Resolution
+
+The bug was that the argument to an `onerror` handler is merely an
+`Event`, not an `ErrorEvent`.  Doing a web search shows that there has
+historically been confusion about which of the two the argument should
+be, but the MDN documentation [is
+clear](https://developer.mozilla.org/en-US/docs/Web/API/WebSocket/error_event#event_type).
+
+## Outdated Explanation (see above)
 
 This is a "minimal" test case that shows that in certain
 circumstances, an `ErrorEvent::message` invocation will cause WASM
